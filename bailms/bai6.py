@@ -1,25 +1,25 @@
-s=input("nhap chuoi: ")
-a=s.split(";")
-chan=0
-am=0
-nt=0
-tong=0
-for i in range(len(a)):
-    x=int(a[i])
-    print(x)
-    tong=tong+x
-    if x%2==0:
-        chan=chan+1
-    if x<0:
-        am=am+1
-    if x>1:
-        ok=True
-        for j in range(2,x):
-            if x%j==0:
-                ok=False
-        if ok:
-            nt=nt+1
-print("so chan:",chan)
-print("so am:",am)
-print("so nguyen to:",nt)
-print("trung binh:",tong/len(a))
+"""
+# Bài 6
+Tạo lớp `Product` với 
+- thuộc tính `_price` có thể được khởi tạo qua constructor 
+- getter price
+- setter price có kiểm tra giá trị truyền vào `> 0`.
+- Viết hàm `__str__` để in thông tin price của product.
+Khởi tại một đối tượng Product và in ra giá.
+"""
+class Product:
+    def __init__(self,price):
+        self._price=price
+    @property
+    def price(self):
+        return self._price
+    @price.setter
+    def price(self,value):
+        if value>0:
+            self._price=value
+    def __str__(self):
+        return "Price: "+str(self._price)
+
+p=float(input("Nhập giá: "))
+sp=Product(p)
+print(sp)

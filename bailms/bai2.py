@@ -1,17 +1,12 @@
-a,b=map(float,input().split())
-
-mua,mub=a**2,b**2
-cana,canb=a**0.5,b**0.5
-chianguyen=int(a//b)
-chiadu=int(a%b)
-lamtrona=round(a)
-lamtronb=round(b)
-
-print(f"a^2 = {mua:.2f}")
-print(f"b^2 = {mub:.2f}")
-print(f"cana(a) = {cana:.2f}")
-print(f"canb(b) = {canb:.2f}")
-print(f"a//b = {chianguyen}")
-print(f"a%b = {chiadu}")
-print(f"lamtron(a) = {lamtrona}")
-print(f"lamtron(b) = {lamtronb}")
+"""
+# Bài 2
+**Yêu cầu**: Yêu cầu người dùng nhập vào một số và tính tổng các chữ số của số đó.
+"""
+def tcs(n):
+    t=0
+    while n%10!=0:
+        t+=n%10
+        n//=10
+    return t
+n=int(input("nhập số:"))
+print(tcs(n))

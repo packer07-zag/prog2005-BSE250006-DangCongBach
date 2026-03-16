@@ -1,8 +1,10 @@
-print("nhập số trong khoảng 1 đến 9")
-while True:
-    a=int(input())
-    if 0<a<10:
-        break
-    print(" nhập sai , biết đọc chữ ko ")
-for i in range(1,11):
-    print(f"{i} * {a} = {i*a}")
+"""
+bai3
+**Yêu cầu**: Viết chương trình chuẩn hóa tên người dùng: 
+Loại bỏ khoảng trắng thừa ở hai đầu, giữa các từ chỉ để lại một 
+khoảng trắng và viết hoa chữ cái đầu mỗi từ. 
+Ví dụ: " nguyêN văn A " -> "Nguyễn Văn A".
+"""
+name=input("Nhập tên: ").strip().split()
+tên=" ".join(name).title()
+print(tên)
